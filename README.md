@@ -7,7 +7,7 @@ This repository contains code and explanations for verifying the non-trivial zer
 
    The Riemann Zeta Function ζ(s) is defined for complex numbers s with real part greater than 1 as:
    <p align="center">
-      &ζ(s) = Σ(1/n^s) for n=1 to infinity&
+      $ζ(s) = Σ(1/n^s) for n=1 to infinity$
    </p>
    Through analytic continuation, this function is defined for all s in the complex plane, except for a simple pole at s = 1.
 
@@ -19,7 +19,7 @@ This repository contains code and explanations for verifying the non-trivial zer
 
    The Riemann Zeta Function satisfies the functional equation:
    <p align="center">
-      &ζ(s) = 2^s * π^(s - 1) * sin(πs / 2) * Γ(1 - s) * ζ(1 - s)&
+      $ζ(s) = 2^s * π^(s - 1) * sin(πs / 2) * Γ(1 - s) * ζ(1 - s)$
    </p>
    where Γ(s) is the gamma function.
    
@@ -27,11 +27,11 @@ This repository contains code and explanations for verifying the non-trivial zer
 
    To simplify computations, the Riemann ξ function is often used. It is defined as:
    <p align="center">
-      &ξ(s) = 1/2 * s * (s - 1) * π^(-s/2) * Γ(s/2) * ζ(s)&
+      $ξ(s) = 1/2 * s * (s - 1) * π^(-s/2) * Γ(s/2) * ζ(s)$
    </p>
    This function has the important property of symmetry:
    <p align="center">
-      &ξ(s) = ξ(1 - s)&
+      $ξ(s) = ξ(1 - s)$
    </p>
    The symmetry implies that if ρ is a zero of ξ(s), then 1 - ρ is also a zero. This leads to the conjecture that all non-trivial zeros of ζ(s) lie on the critical line where the real part of s is 1/2.
 
@@ -41,13 +41,13 @@ This repository contains code and explanations for verifying the non-trivial zer
    
 The Riemann-Siegel formula is an approximation used to efficiently compute the zeta function near the critical line for large imaginary parts. It is given by:
 <p align="center">
-   &Z(t) ≈ 2 Σ(cos(θ(t) - t * ln(n)) / sqrt(n)) for n=1 to N&
+   $Z(t) ≈ 2 Σ(cos(θ(t) - t * ln(n)) / sqrt(n)) for n=1 to N$
 </p>
-where t is the imaginary part of s, and &N = floor(sqrt(t / (2 * π)))&.
+where t is the imaginary part of s, and $N = floor(sqrt(t / (2 * π)))$.
 
 The Riemann-Siegel theta function θ(t) is defined as:
 <p align="center">
-   &θ(t) = Im(ln(Γ(1/4 + it/2))) - t * ln(π) / 2&
+   $θ(t) = Im(ln(Γ(1/4 + it/2))) - t * ln(π) / 2$
 </p>
 This formula allows for the efficient calculation of the Z function, an essential tool for finding the zeros of ζ(s) along the critical line.
 
@@ -125,12 +125,12 @@ Our program successfully found the first ten **non-trivial zeros** of the Rieman
 Each output zero represents the fact that the zeta function is zero at a specific imaginary part t value, i.e.:
 1. **t = 14.134725...**
 
-    This means &ζ(1/2+14.134725i)=0&
+    This means $ζ(1/2+14.134725i)=0$
 2. **t = 21.022039...**
 
-    This means &ζ(1/2+21.022039i)=0&
+    This means $ζ(1/2+21.022039i)=0$
 3. **t = 25.010857...**
 
-    This means &ζ(1/2+25.010857i)=0&
+    This means $ζ(1/2+25.010857i)=0$
 
 And so on, our program finds the non-trivial zero of the zeta function in the imaginary part interval [0,50].
