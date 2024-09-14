@@ -19,7 +19,7 @@ This repository contains code and explanations for verifying the non-trivial zer
 
    The Riemann Zeta Function satisfies the functional equation:
    <p align="center">
-      $ζ(s) = 2^s * π^(s - 1) * sin(πs / 2) * Γ(1 - s) * ζ(1 - s)$
+      $ζ(s) = 2^sπ^(s - 1)sin(πs / 2)Γ(1 - s)ζ(1 - s)$
    </p>
    where Γ(s) is the gamma function.
    
@@ -27,7 +27,7 @@ This repository contains code and explanations for verifying the non-trivial zer
 
    To simplify computations, the Riemann ξ function is often used. It is defined as:
    <p align="center">
-      $ξ(s) = 1/2 * s * (s - 1) * π^(-s/2) * Γ(s/2) * ζ(s)$
+      $ξ(s) = 1/2s(s - 1)π^(-s/2)Γ(s/2)ζ(s)$
    </p>
    This function has the important property of symmetry:
    <p align="center">
@@ -41,13 +41,13 @@ This repository contains code and explanations for verifying the non-trivial zer
    
 The Riemann-Siegel formula is an approximation used to efficiently compute the zeta function near the critical line for large imaginary parts. It is given by:
 <p align="center">
-   $Z(t) ≈ 2 Σ(cos(θ(t) - t * ln(n)) / sqrt(n)) for n=1 to N$
+   $Z(t) ≈ 2 Σ(cos(θ(t) - tln(n)) / sqrt(n)) for n=1 to N$
 </p>
-where t is the imaginary part of s, and $N = floor(sqrt(t / (2 * π)))$.
+where t is the imaginary part of s, and $N = floor(sqrt(t / (2π)))$.
 
 The Riemann-Siegel theta function θ(t) is defined as:
 <p align="center">
-   $θ(t) = Im(ln(Γ(1/4 + it/2))) - t * ln(π) / 2$
+   $θ(t) = Im(ln(Γ(1/4 + it/2))) - tln(π) / 2$
 </p>
 This formula allows for the efficient calculation of the Z function, an essential tool for finding the zeros of ζ(s) along the critical line.
 
